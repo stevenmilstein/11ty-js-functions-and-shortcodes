@@ -2,7 +2,7 @@
 
 ## Try it
 
-Click [Stackblitz](https://stackblitz.com/github/11ty/demo-eleventy-serverless) to install
+Click [Stackblitz](https://stackblitz.com/github/stevenmilstein/11ty-js-functions-and-shortcodes) to install.
 
 1. From the terminal: `npm start`
 1. If necessary, change embedded browser port from 3001 to 8080
