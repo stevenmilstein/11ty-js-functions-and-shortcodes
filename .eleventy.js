@@ -3,6 +3,7 @@ module.exports = (eleventyConfig) => {
     return new Date();
   });
 
+  // This has no affect
   eleventyConfig.setDataDeepMerge(true);
 
   return {

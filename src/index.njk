@@ -1,0 +1,74 @@
+---js
+{
+  title: "Simple",
+  summary: "Javascript Return Values Containing Shortcode Not Rendering",
+  layout: "base.njk",
+  permalink: "/",
+  eleventyComputed: {
+    computedString: "{% now %}",
+    computedFunc: (data) => "{% now %}",
+  }
+}
+---
+<div>See <a href='/detail/'>detail</a> or, <a href='https://www.11ty.dev/docs/data-computed/#using-javascript'>https://www.11ty.dev/docs/data-computed/#using-javascript</a> </div>
+
+<table style="border: 1px solid, black"><tbody>
+  <tr>
+    <th>src</th>
+    <th>Type</th>
+    <th>Code</th>
+    <th>/index.njk {% raw %} {% now %} {% endraw %} Result  </th>
+    <th style="text-align:center">Works As Expected</th>
+  </tr> 
+  <tr>
+    <td>.eleventy.js</td>
+    <td>Shortcode</td>
+    <td>{% raw %}<code><pre>
+  eleventyConfig.addShortcode("<mark>now</mark>", () => {
+    return new Date();
+  });
+    </pre></code>{% endraw %}</td>
+    <td>{% now %}</td>
+    <td style="text-align:center">&check;</td>
+  </tr>
+  <tr>
+    <td>/simple.njk</td>
+    <td>eleventy Computed Template String</td>
+    <td>{% raw %}<code><pre>
+---js
+{
+  title: "Simple",
+  summary: "Javascript Return Values Containing Shortcode Not Rendering",
+  layout: "base.njk",
+  permalink: "/simple/",
+  eleventyComputed: {
+    <mark>computedString: "{% now %}",</mark>
+    computedFunc: (data) => "{% now %}",
+  }
+}
+---
+   </pre></code>{% endraw %}</td>
+    <td>{{ computedString }}</td>
+    <td style="text-align:center">&check;</td>
+  </tr>
+  <tr>
+    <td>/simple.njk</td>
+    <td>eleventy Computed Function</td>
+    <td>{% raw %}<code><pre>
+---js
+{
+  title: "Simple",
+  summary: "Javascript Return Values Containing Shortcode Not Rendering",
+  layout: "base.njk",
+  permalink: "/simple/",
+  eleventyComputed: {
+    computedString: "{% now %}",
+    <mark>computedFunc: (data) => "{% now %}",</mark>
+  }
+}
+---
+   </pre></code>{% endraw %}</td>
+    <td>{{ computedFunc }}</td>
+    <td style="text-align:center"><mark>&cross;</mark></td>
+  </tr>
+</tbody></table>

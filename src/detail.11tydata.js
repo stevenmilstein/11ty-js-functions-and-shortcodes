@@ -10,6 +10,7 @@ async function asyncFuncNow() {
 
 module.exports = {
   eleventyComputed: {
+    version: "Eleventy <mark>{{ pkg.dependencies['@11ty/eleventy'] }}</mark>",
     computedTemplateStringNow: `{% now %}`,
     computedFunctionNow: (data) => `{% now %}`,
     computedFuncCallNow: (data) => funcNow(),
