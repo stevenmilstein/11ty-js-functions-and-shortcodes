@@ -1,5 +1,7 @@
 # Javascript Return Values Containing Shortcode Not Rendering
 
+#### See https://github.com/11ty/eleventy/issues/2069
+
 ## Try it
 
 Click [Stackblitz](https://stackblitz.com/github/stevenmilstein/11ty-js-functions-and-shortcodes) to install.
