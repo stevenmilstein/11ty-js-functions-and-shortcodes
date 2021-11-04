@@ -2,7 +2,7 @@
 
 ## Try it
 
-[Stackblitz](]https://stackblitz.com/github/11ty/demo-eleventy-serverless)
+Click [Stackblitz](https://stackblitz.com/github/11ty/demo-eleventy-serverless) to install
 
 1. From the terminal: `npm start`
 1. If necessary, change embedded browser port from 3001 to 8080
@@ -38,4 +38,4 @@ to:
 
 ### 4. Regression
 
-Notice the result for `_data/globalDataJsonNow.json` is no longer renders today's date.
+Notice the result for `_data/globalDataJsonNow.json` no longer renders today's date.
